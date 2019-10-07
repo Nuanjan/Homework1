@@ -44,7 +44,7 @@ public class Homework1 {
 	public static int[] removeDup(int[] array) {
 		//The code for the Clean the Data question goes here
 		int k=0;
-		int [] temp = new int [array.length];
+		int temp = array.length;
 		
 		 if (array.length==0||array.length==1){  
 	            return array;  
@@ -55,16 +55,17 @@ public class Homework1 {
 	        	//	System.out.println("old j ="+array[j]);
 	        		if(array[i]==array[j]) {
 	        			j=j+1;
+	        		temp = array[j];
 	        		}
+	        		
 	        			
-	        		System.out.println("i ="+array[i]+"j ="+array[j]);
-	        			
+	        		
 	        			
 	        		
 	        	}
 	        		}
 	        	
-	        return Arrays.copyOf(i,j);
+	        return Arrays.copyOf(array,temp);
 	        
 	           
 	        
