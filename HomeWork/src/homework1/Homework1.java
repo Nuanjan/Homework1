@@ -43,30 +43,26 @@ public class Homework1 {
 
 	public static int[] removeDup(int[] array) {
 		//The code for the Clean the Data question goes here
-		int k=0;
-		int temp = array.length;
+		int newArr = new int[0];
+		int j=0;
+		boolean notSame=true;
+		for(int i=0;i<array.length;i++) {
+			if(notSame) {
+				newArr=array[i];
+			}else if(notSame==false) {
+				break;
+			}
+		}
 		
-		 if (array.length==0||array.length==1){  
-	            return array;  
-	        }  
-	            
-	        for (int i=0; i<array.length; i++){ 
-	        	for(int j= i+1;j<array.length;j++) {
-	        	//	System.out.println("old j ="+array[j]);
-	        		if(array[i]==array[j]) {
-	        			j=j+1;
-	        		temp = array[j];
-	        		}
-	        		
-	        			
-	        		
-	        			
-	        		
-	        	}
-	        		}
-	        	
-	        return Arrays.copyOf(array,temp);
-	        
+		for(int k=0;k<array.length;k++) {
+			if(notSame) {
+				newArr=array[k];
+			}else if(notSame==false) {
+				newArr=array[j];
+				j++;
+			}
+		}
+		return newArr;
 	           
 	        
 	            }
